@@ -115,7 +115,7 @@
     left: 50%;
     transform: translateX(-50%) rotate(calc(var(--rotate-3)*1deg));
     border-radius: 50%;
-    background:-moz-linear-gradient(var(--black)15%,var(--white)50%,var(--black)85%);
+    background:-webkit-linear-gradient(var(--black)15%,var(--white)50%,var(--black)85%);
     transform-origin: bottom;
 }
 
