@@ -16,7 +16,7 @@
             align-items: center;
             width: 100vw;
             height: 100vh;          /* put this in single line */
-            background: -moz-linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url('bg.jpeg');
+            background: -webkit-linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url('bg.jpeg');
             z-index: 1;
             font-family: 'Poppins', sans-serif;
             position: relative;
