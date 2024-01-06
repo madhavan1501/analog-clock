@@ -1,139 +1,191 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 
-
-        :root{
-            --black:black;
-            --white:white;                  /* CSS */
-        }
-        body{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;          /* put this in single line */
-            background: -webkit-linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url('bg.jpeg');
-            z-index: 1;
-            font-family: 'Poppins', sans-serif;
-            position: relative;
-            background-size:cover;
-            overflow: hidden;
-            flex-direction: column-reverse;
-            background-position: center;
-        }
-        .clock{
-            height:600px;
-            width: 600px;
-            border: 10px dotted var(--white);
-            border-radius: 50%;
-            position: relative;
-            z-index: 3;
-        }
-
-    .btn{
-        z-index: 20;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        font-size: 30px;
-        color: var(--black);
-        background-color: var(--white);
-        border-radius: 50%;
-        height: 35px;
-        width: 35px;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-    }
-    .numbers{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        text-align: center;
-        font-size: 25px;
-        font-weight: 700;
-        --rotate:0deg;
-        transform: rotate(var(--rotate));
-        z-index: 5;
-        color: var(--black);
-    }
-
-
-.numbers1{--rotate:30deg}
-.numbers2{--rotate:60deg}
-.numbers3{--rotate:90deg}
-.numbers4{--rotate:120deg}
-.numbers5{--rotate:150deg}
-.numbers6{--rotate:180deg}
-.numbers7{--rotate:210deg}
-.numbers8{--rotate:2400deg}
-.numbers9{--rotate:270deg}
-.numbers10{--rotate:300deg}
-.numbers11{--rotate:330deg}
-
- .numbers::after{
-    content: '';
-    color: var(--white);
-    height: 15px;
-    width: 4px;
-    background-color: var(--white);
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translate(-50%);
- }
- 
- .num{
-    user-select: none;
-    --rotate-2:0deg;
-    transform: rotate(var(--rotate-2));
-    margin-top: 5px;
- }
-
-
-    .num1{--rotate-2:-30deg}
-    .num2{--rotate-2:-60deg}
-    .num3{--rotate-2:-90deg}
-    .num4{--rotate-2:240deg}
-    .num5{--rotate-2:210deg}
-    .num6{--rotate-2:180deg}
-    .num7{--rotate-2:150deg}
-    .num8{--rotate-2:120deg}
-    .num9{--rotate-2:90deg}
-    .num10{--rotate-2:-300deg}
-    .num11{--rotate-2:-330deg}
-
-.needle{
-    position: absolute;
-    --rotate-3:0;
-    bottom: 50%;
-    left: 50%;
-    transform: translateX(-50%) rotate(calc(var(--rotate-3)*1deg));
-    border-radius: 50%;
-    background:-webkit-linear-gradient(var(--black)15%,var(--white)50%,var(--black)85%);
-    transform-origin: bottom;
+:root {
+  --black: black;
+  --white: white; /* CSS */
+}
+body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh; /* put this in single line */
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+    url("bg.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+    url("bg.jpeg");
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+  flex-direction: column-reverse;
+  background-position: center;
+}
+.clock {
+  height: 600px;
+  width: 600px;
+  border: 10px dotted var(--white);
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
 }
 
-.hrs{
-    height: 150px;
-    width: 10px;
+.btn {
+  z-index: 20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
 }
-.min{
-    height: 220px;
-    width: 10px;
+.numbers {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  --rotate: 0deg;
+  transform: rotate(var(--rotate));
+  z-index: 5;
+  color: var(--black);
+}
 
+.numbers1 {
+  --rotate: 30deg;
 }
-.sec{
-    height: 250px;
-    width: 5px;
-    background: none;
-    background-color: rgba(255, 255, 0);
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    z-index: 14;
+.numbers2 {
+  --rotate: 60deg;
+}
+.numbers3 {
+  --rotate: 90deg;
+}
+.numbers4 {
+  --rotate: 120deg;
+}
+.numbers5 {
+  --rotate: 150deg;
+}
+.numbers6 {
+  --rotate: 180deg;
+}
+.numbers7 {
+  --rotate: 210deg;
+}
+.numbers8 {
+  --rotate: 2400deg;
+}
+.numbers9 {
+  --rotate: 270deg;
+}
+.numbers10 {
+  --rotate: 300deg;
+}
+.numbers11 {
+  --rotate: 330deg;
+}
+
+.numbers::after {
+  content: "";
+  color: var(--white);
+  height: 15px;
+  width: 4px;
+  background-color: var(--white);
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.num {
+  user-select: none;
+  --rotate-2: 0deg;
+  transform: rotate(var(--rotate-2));
+  margin-top: 5px;
+}
+
+.num1 {
+  --rotate-2: -30deg;
+}
+.num2 {
+  --rotate-2: -60deg;
+}
+.num3 {
+  --rotate-2: -90deg;
+}
+.num4 {
+  --rotate-2: 240deg;
+}
+.num5 {
+  --rotate-2: 210deg;
+}
+.num6 {
+  --rotate-2: 180deg;
+}
+.num7 {
+  --rotate-2: 150deg;
+}
+.num8 {
+  --rotate-2: 120deg;
+}
+.num9 {
+  --rotate-2: 90deg;
+}
+.num10 {
+  --rotate-2: -300deg;
+}
+.num11 {
+  --rotate-2: -330deg;
+}
+
+.needle {
+  position: absolute;
+  --rotate-3: 0;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(calc(var(--rotate-3) * 1deg));
+  border-radius: 50%;
+  background: -webkit-linear-gradient(
+    var(--black) 15%,
+    var(--white) 50%,
+    var(--black) 85%
+  );
+  background: linear-gradient(
+    var(--black) 15%,
+    var(--white) 50%,
+    var(--black) 85%
+  );
+  transform-origin: bottom;
+}
+
+.hrs {
+  height: 150px;
+  width: 10px;
+}
+.min {
+  height: 220px;
+  width: 10px;
+}
+.sec {
+  height: 250px;
+  width: 5px;
+  background: none;
+  background-color: rgba(255, 255, 0);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  z-index: 14;
 }
